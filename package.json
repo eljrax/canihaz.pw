@@ -1,0 +1,10 @@
+{
+    "name": "canihaz.pw",
+    "description": "canihaz.pw API",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "4.x",
+        "password-generator": "*"
+    }
+}
