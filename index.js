@@ -54,19 +54,19 @@ app.get('/help', function (req, res) {
 });
 
 // Present a simple about page
-app.get('/about', function (res) {
+app.get('/about', function (req, res) {
     "use strict";
     res.status(200).send('canihaz.pw is provided by Michael Leer (Trozz) and is hosted on the Rackspace Public Cloud\r\n');
 });
 
 // Github Link
-app.get('/git', function (res) {
+app.get('/git', function (req, res) {
     "use strict";
     res.status(200).send('canihaz.pw source is available on Github @ https://github.com/Trozz/canihaz.pw\r\n');
 });
 
 //app.use(device.capture());
-app.use(function (res) {
+app.use(function (req, res) {
     "use strict";
     res.status(200).send(genPass(12, false) + '\r\n');
 });
