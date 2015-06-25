@@ -36,7 +36,7 @@ app.get('/prefix/:pre/:len', function (req, res) {
     if (isNaN(req.params.len)) {
         res.status(400).send('must be a number\r\n').end();
     } else {
-        var length = req.params.pre.length + req.params.len;
+        var length =  parseInt(req.params.len) + parseInt(req.params.pre.length);
         res.status(200).send(genPass(length, false, '', req.params.pre) + '\r\n');
     }
 });
